@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  background-color: var(--main-back-ground);
+}
+:root {
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  /* ---- */
+  --main-back-ground: hsl(217, 54%, 11%);
+  --card-back-ground: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+.icon {
+  margin-right: 3px;
+}
+.card {
+  margin: 50px auto;
+  width: 400px;
+  display: grid;
+  grid-template-rows: 360px 120px 50px 60px;
+  background-color: var(--card-back-ground);
+  padding: 20px;
+  border-radius: 10px;
+}
+.card .card-image {
+  position: relative;
+}
+
+.card-image:hover .hover-image {
+  opacity: 1;
+}
+
+.card-image .hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(178deg 100% 50% / 45%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.eye {
+  color: white;
+  font-size: 30px;
+}
+.card .card-image img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.card .card-text {
+}
+
+.card-text h3 {
+  color: var(--white);
+  font-weight: 600;
+  margin-top: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card-text h3:hover {
+  color: var(--Cyan);
+}
+.card-text p {
+  color: hsl(0deg 0% 100% / 62%);
+  font-weight: 300;
+  margin-top: 15px;
+}
+
+.card-text__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 10px 0;
+}
+
+.card-text__info .value {
+  color: var(--Cyan);
+}
+
+.card-text__info .time {
+  color: hsl(0deg 0% 100% / 62%);
+}
+
+.card-person {
+  border-top: 1px solid hsl(0deg 0% 100% / 62%);
+  display: flex;
+  gap: 20px;
+  padding: 40px 0 28px 0;
+  align-items: center;
+}
+
+.card-person img {
+  width: 50px;
+  border: 2px solid var(--Softblue);
+  border-radius: 50%;
+}
+
+.card-person p {
+  color: hsl(0deg 0% 100% / 62%);
+  font-weight: 300;
+}
+
+.card-person p .name {
+  color: var(--white);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card-person p .name:hover {
+  color: var(--Cyan);
+}
